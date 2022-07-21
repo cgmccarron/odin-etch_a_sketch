@@ -2,6 +2,10 @@
   --divNum: 64;
 }
 
+body {
+  background-color: salmon;
+}
+
 header {
   display: flex;
   height: 15vh;

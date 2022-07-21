@@ -7,9 +7,16 @@ inputColor.addEventListener("input", (e) => {
   colorVar = e.target.value;
 });
 
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", (e) => (colorVar = e.target.value));
-});
+function buttonController(value) {
+  switch (value) {
+    case "erase":
+      updateDivNum;
+      break;
+    case "rainbow":
+      colorVar = "pink";
+      break;
+  }
+}
 
 updateDivNum();
 
