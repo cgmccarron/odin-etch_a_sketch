@@ -10,11 +10,15 @@
   <body>
     <header>This is the Header</header>
     <div class="sketchBoard">
-      <div id="board">
-        <div id="boardPixel"></div>
+      <div id="board"></div>
+      <div class="boardContainer">
+        <input type="number" id="input" value="10" />
+        <div>Set the amount of pixels on board</div>
       </div>
       <div class="boardContainer">
-        <input type="number" id="input" />
+        <button value="red">Red</button>
+        <button value="white">White</button>
+        <button value="salmon">Salmon</button>
       </div>
     </div>
     <script src="index.js"></script>

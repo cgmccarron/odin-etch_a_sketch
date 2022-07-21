@@ -1,10 +1,10 @@
 :root {
-  --divNum: 1;
+  --divNum: 64;
 }
 
 header {
   display: flex;
-  height: 25vh;
+  height: 15vh;
   align-items: center;
   justify-content: center;
   background-color: salmon;
@@ -12,13 +12,14 @@ header {
 }
 .sketchBoard {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
   grid-template-rows: 1fr 1fr;
-  height: 50vh;
+  height: 80vh;
+  justify-content: center;
 }
 
 #board {
-  grid-column: 2 /4;
+  grid-column: 2/4;
   grid-row: 1 /3;
   display: grid;
   grid-template-columns: repeat(var(--divNum), 1fr);
@@ -26,7 +27,12 @@ header {
 }
 
 .boardContainer {
-  background-color: blue;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-rows: auto;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 div {
