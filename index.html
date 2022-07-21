@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>This is the Header</header>
+    <header><h1>Etch-a-Scetch</h1></header>
     <div class="sketchBoard">
       <div id="board"></div>
       <div class="boardContainer">
-        <input type="number" id="input" value="10" />
-        <div>Set the amount of pixels on board</div>
+        <div class="tips">Set Pixels</div>
+        <input type="number" id="inputNum" value="10" />
+        <div class="tips">Shake to Erase</div>
+        <button id="erase">Shake!!</button>
       </div>
       <div class="boardContainer">
-        <button value="red">Red</button>
-        <button value="white">White</button>
-        <button value="salmon">Salmon</button>
+        <div class="tips">Pick Color</div>
+        <input type="color" id="inputColor" />
+        <button id="erase">Rainbow</button>
+        <button id="erase">Greyscale</button>
       </div>
     </div>
     <script src="index.js"></script>

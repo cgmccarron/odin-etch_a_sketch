@@ -9,6 +9,7 @@ header {
   justify-content: center;
   background-color: salmon;
   color: white;
+  text-shadow: 4px 4px 4px slategray;
 }
 .sketchBoard {
   display: grid;
@@ -16,6 +17,8 @@ header {
   grid-template-rows: 1fr 1fr;
   height: 80vh;
   justify-content: center;
+  padding: 0 10%;
+  background-color: salmon;
 }
 
 #board {
@@ -24,19 +27,20 @@ header {
   display: grid;
   grid-template-columns: repeat(var(--divNum), 1fr);
   grid-template-rows: repeat(var(--divNum), 1fr);
+  border: 4px solid steelblue;
 }
 
 .boardContainer {
-  grid-column: 1/2;
   display: grid;
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 80px));
+  column-gap: 2%;
   background-color: white;
   justify-content: center;
   align-items: center;
-}
-
-div {
-  border: 2px solid black;
+  padding: 5%;
+  background-color: lightblue;
+  border: 4px solid steelblue;
+  border-right: none;
 }
 
 #boardPixel {
@@ -45,6 +49,25 @@ div {
   margin: 0;
 }
 
-#boardPixel:hover {
-  background-color: lightblue;
+#inputColor {
+  height: 50%;
+  width: auto;
+}
+
+.tips {
+  color: white;
+  margin: 0 5%;
+  font-weight: bold;
+  font-size: large;
+  text-shadow: 1px 1px 2px steelblue;
+}
+
+button,
+#inputNum,
+#inputColor {
+  background-color: white;
+  border-radius: 10%;
+  border: 1px solid steelblue;
+  margin: 0 5%;
+  cursor: pointer;
 }

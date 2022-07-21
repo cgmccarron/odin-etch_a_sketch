@@ -1,18 +1,23 @@
 let sketchBoard = document.getElementById("board");
-let input = document.getElementById("input");
+let inputNum = document.getElementById("inputNum");
+let colorVar = "black";
+let inputColor = document.getElementById("inputColor");
+
+inputColor.addEventListener("input", (e) => {
+  colorVar = e.target.value;
+});
+
 document.querySelectorAll("button").forEach((button) => {
   button.addEventListener("click", (e) => (colorVar = e.target.value));
 });
 
-let colorVar = "black";
-
 updateDivNum();
 
-input.addEventListener("change", updateDivNum);
+inputNum.addEventListener("change", updateDivNum);
 
 function updateDivNum() {
   console.log("updaing");
-  divNum = input.value;
+  divNum = inputNum.value;
   for (i = 0; i < divNum ** 2; i++) {
     let newDiv = document.createElement("div");
     newDiv.id = "boardPixel";
