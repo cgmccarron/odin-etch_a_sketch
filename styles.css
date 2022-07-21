@@ -1,0 +1,44 @@
+:root {
+  --divNum: 1;
+}
+
+header {
+  display: flex;
+  height: 25vh;
+  align-items: center;
+  justify-content: center;
+  background-color: salmon;
+  color: white;
+}
+.sketchBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 50vh;
+}
+
+#board {
+  grid-column: 2 /4;
+  grid-row: 1 /3;
+  display: grid;
+  grid-template-columns: repeat(var(--divNum), 1fr);
+  grid-template-rows: repeat(var(--divNum), 1fr);
+}
+
+.boardContainer {
+  background-color: blue;
+}
+
+div {
+  border: 2px solid black;
+}
+
+#boardPixel {
+  background-color: white;
+  border: none;
+  margin: 0;
+}
+
+#boardPixel:hover {
+  background-color: lightblue;
+}
